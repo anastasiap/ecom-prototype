@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>e-commerce</title>
+
+    <link rel="stylesheet" href="css/jquery-ui.min.css">
+    <!--    <link rel="stylesheet" href="css/jquery-ui.structure.min.css">-->
+    <link rel="stylesheet" href="css/chosen.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/magic.css">
+
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script type="text/javascript"  src="js/html5shiv.js"></script>
+    <script type="text/javascript"  src="js/respond.min.js"></script>
+    <![endif]-->
+
+    <link href='http://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Merriweather' rel='stylesheet' type='text/css'>
+</head>
+<body>
+<div class="full-height">
+    <div class="main-wrapper container-fluid"> <!-- container adds width 1250px -->
+
+        <header class="navbar-fixed-top">
+            <nav class="navbar" role="navigation">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-md-3">
+                            <h1 class="main-logo pull-left"><a href="payments.html"><span class="name"></span> <span class="ecom">e</span>-commerce</a></h1>
+
+                            <div class="navbar-header">
+                                <button type="button" class="navbar-toggle main-nav-toggle" data-toggle="collapse" data-target=".main-nav">
+                                    <span class="sr-only">Toggle navigation</span>
+                                    <span class="icon-bar"></span>
+                                    <span class="icon-bar"></span>
+                                    <span class="icon-bar"></span>
+                                </button>
+                            </div>
+
+                        </div>
+                        <div class="col-md-9">
+                            <div class="collapse navbar-collapse main-nav">
+                                <ul class="nav navbar-nav">
+                                    <li><a class="is-selected" href="index.html">Dashboard</a></li>
+                                    <li class="dropdown">
+                                        <a class="is-selected"  href="payments.html">Payments</a>
+                                    </li>
+                                    <li><a class="" href="batches.html">Batches</a></li>
+                                    <!--<li><a href="merchants.html">Merchants</a></li>-->
+                                    <li><a href="moto.html">MOTO</a></li>
+                                    <li><a href="docs.html">Docs & samples</a></li>
+                                    <li class="dropdown user-nav">
+                                        <a class="dropdown-toggle" data-toggle="dropdown" href="profile.html">
+                                            <span class="glyphicon glyphicon-user"></span>
+                                            Vasilij Pupkin <span class="caret"></span>
+                                        </a>
+                                        <ul class="dropdown-menu" role="menu">
+                                            <li><a href="profile.html">Profile</a></li>
+                                            <li><a href="login.html">Logout</a></li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </div><!-- /.navbar-collapse -->
+                        </div>
+                    </div>
+                </div>
+                <div class="breadcrumb-wrapper">
+                    <ol class="breadcrumb text-right">
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">Library</a></li>
+                        <li class="active">Data</li>
+                    </ol>
+                </div>
+            </nav>
+        </header>
+        <div class="animated yt-loader"></div>
+
+        <div class="content-wrapper clearfix">
+            <div class="row">
+                <div class="col-sm-3 col-xs-12">
+                    <aside class="sidebar">
+                        <div>
+                            <div class="search-wrapper clearfix" data-toggle="tooltip" data-placement="right" title='#'>
+                                <form action="search-results.html" role="form">
+                                    <div class="input-group">
+                                        <input type="text" class="form-control search-field" name="search-field" placeholder="Search">
+                                        <span class="input-group-btn">
+                                      <button class="btn search-btn" type="submit"><span class="glyphicon glyphicon-search"></span></button>
+                                    </span>
+                                    </div>
+
+                                    <div class="im-lucky im-lucky-payment dropdown">
+                                        <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
+                                            <li role="presentation"><span class="glyphicon glyphicon-ok"></span><a role="menuitem" tabindex="-1" href="single-payment.html">Payment ID: 123456</a></li>
+                                        </ul>
+                                    </div>
+                                    <div class="im-lucky im-lucky-order dropdown">
+                                        <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
+                                            <p role="presentation">Are you looking for: </p>
+                                            <li role="presentation"><span class="glyphicon glyphicon-ok"></span><a role="menuitem" tabindex="-1" href="single-payment.html">Order ID: 4568123</a></li>
+                                            <li role="presentation" class="divider"></li>
+                                            <p role="presentation">or click search button.</p>
+                                        </ul>
+                                    </div>
+                                    <div class="im-lucky im-lucky-arn dropdown">
+                                        <div class="dropdown-menu small" role="menu" aria-labelledby="dropdownMenu1">
+                                            <p role="presentation">Are you looking for: </p>
+                                            <p role="presentation"><a role="menuitem" tabindex="-1" href="single-payment.html">ARN NR: 987654</a></p>
+                                            <p role="presentation" class="divider"></p>
+                                            <p role="presentation"><p role="menuitem" tabindex="-1" href="#">or click search.</p></p>
+                                        </div>
+                                    </div>
+                                    <div class="im-lucky search-desc dropdown">
+                                        <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
+                                            <li role="presentation"><span class="glyphicon glyphicon-ok"></span><a role="menuitem" tabindex="-1" href="search-results.html">Description</a></li>
+                                            <li role="presentation"><span class="glyphicon glyphicon-ok"></span><a role="menuitem" tabindex="-1" href="search-results.html">Card Name</a></li>
+                                            <li role="presentation"><span class="glyphicon glyphicon-ok"></span><a role="menuitem" tabindex="-1" href="search-results.html">Merchant</a></li>
+                                        </ul>
+                                    </div>
+
+                                    <div class="form-group-sm">
+                                        <select class="merchant-select form-control"  multiple="" data-placeholder="Merchant">
+                                            <option value="kleoss.eu">kleoss.eu</option>
+                                            <option value="tmw.ee">tmw.ee</option>
+                                            <option value="Bands, Orchestras, and Miscellaneous Entertainers Something Else">Bands, Orchestras, and Miscellaneous Entertainers Something Else</option>
+                                            <option value="Larson and Holz IT Ltd">Larson and Holz IT Ltd</option>
+                                            <option value="abmotoparts.com">abmotoparts.com</option>
+                                        </select>
+                                    </div>
+
+                                    <div class="form-group-sm">
+                                        <select class="state form-control"  multiple="" data-placeholder="State">
+                                            <option value="kleoss.eu">INITIATED</option>
+                                            <option value="tmw.ee">DECLINED</option>
+                                            <option value="APPROVED">APPROVED</option>
+                                            <option value="Larson and Holz IT Ltd">CANCELLED</option>
+                                            <option value="abmotoparts.com">DEPOSITED</option>
+                                        </select>
+                                    </div>
+
+                                    <div class="form-group-sm clearfix">
+                                        <div class="pull-left three-inputs short-inputs">
+                                            <select class="state form-control"  multiple="" data-placeholder="Curr">
+                                                <option value="kleoss.eu">EUR</option>
+                                                <option value="tmw.ee">RUB</option>
+                                                <option value="APPROVED">NZD</option>
+                                            </select>
+                                        </div>
+                                        <div class="pull-left three-inputs short-inputs">
+                                            <input type="text" class="form-control" placeholder="00.00">
+                                        </div>
+                                        <div class="pull-right three-inputs  short-inputs">
+                                            <input type="text" class="form-control" placeholder="00.00">
+                                        </div>
+
+                                    </div>
+
+                                    <div class="form-group-sm clearfix">
+                                        <div class="pull-left short-inputs">
+                                            <input type="text" class="form-control date-from" placeholder="25.06.2014">
+                                        </div>
+                                        <div class="pull-right short-inputs">
+                                            <input type="text" class="form-control date-to" placeholder="25.07.2014">
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group-sm">
+                                        <input type="text" class="form-control" placeholder="Merchant">
+                                    </div>
+
+                                    <input type="submit" class="search-btn btn btn-block" value="Search">
+                                </form>
+                            </div>
+
+                            <nav class="action-links">
+                                <ul class="list-group">
+                                    <li class="list-group-item hidden-lg"><span class="glyphicon glyphicon-stats"></span><a href="payments.html">See your dashboard</a></li>
+                                    <li class="list-group-item"><span class="glyphicon glyphicon-saved"></span><a href="payments.html">Deposit or cancel payments</a></li>
+                                    <li class="list-group-item"><span class="glyphicon glyphicon-minus"></span><a href="payments.html">Make a refund </a></li>
+                                    <li class="list-group-item"><span class="glyphicon glyphicon-floppy-save"></span><a href="batches.html">Create a financial report</a></li>
+                                    <li class="list-group-item"><span class="glyphicon glyphicon-random"></span><a href="batches.html">Create a chargeback report</a></li>
+                                    <li class="list-group-item"><span class="glyphicon glyphicon-flag"></span><a href="#">Respond to retrieval requests</a></li>
+                                    <li class="list-group-item"><span class="glyphicon glyphicon-plus"></span><a href="moto.html">Add a payment to subscription</a></li>
+                                    <li class="list-group-item"><span class="glyphicon glyphicon-phone-alt"></span><a href="moto.html">Add a payment via MO-TO</a></li>
+                                    <li class="list-group-item"><span class="glyphicon glyphicon-tower"></span><a href="merchants.html">Generate encryption keys</a></li>
+                                    <li class="list-group-item"><span class="glyphicon glyphicon-wrench"></span><a href="profile.html">Change your details</a></li>
+                                </ul>
+                            </nav>
+
+                        </div> <!-- affix -->
+                    </aside>
+                </div> <!-- col-sm-3 -->
+
+<div class="col-sm-9 col-xs-12">
+  <div class="single-page moto">
+    <div class="single-page-header">
+      <h2 class="page-title">Add new payment</h2>
+    </div>
+
+    <div class="moto-form-wrapper">
+      <form role="form" action="success.php">
+        <span class="glyphicon glyphicon-credit-card"></span>
+        <h4>Card Info</h4>
+        <div class="form-group">
+            <input name="name" class="form-control" type="text" placeholder="Name">
+        </div>
+        <div class="form-group">
+          <div class="row">
+            <div class="form-group col-sm-7">
+              <input name="card-number" class="form-control" type="text" placeholder="xxxx-xxxx-xxxx-xxxx-xxxxx">
+            </div>
+            <label for="card-number" class="control-label col-sm-2">Expires</label>
+            <div class="col-sm-3">
+              <input type="text" class="form-control" placeholder="MM/YY">
+            </div>
+          </div>
+        </div>
+        <div class="order-info-wrapper">
+          <span class="glyphicon glyphicon-shopping-cart"></span>
+          <h4>Order Info</h4>
+          <div class="row">
+            <div class="col-sm-5">
+              <div class="input-group">
+                <input type="text" class="form-control" placeholder="00.00">
+                <div class="input-group-btn">
+                  <button type="button" class="btn dropdown-toggle" data-toggle="dropdown">EUR <span class="caret"></span></button>
+                  <ul class="dropdown-menu dropdown-menu-right" role="menu">
+                    <li><a href="#">USD</a></li>
+                    <li><a href="#">RUB</a></li>
+                  </ul>
+                </div><!-- /btn-group -->
+              </div><!-- /input-group -->
+            </div>
+          <div class="col-sm-7  moto-operation">
+           <div class="form-group">
+              <div class="btn-group">
+                <button type="button" class="btn">Hold</button>
+                <button type="button" class="btn">Deposit</button>
+                <button type="button" class="btn">Credit</button>
+              </div>
+           </div>
+          </div>
+        </div>
+        <div class="form-group">
+          <textarea name="order-desc" class="form-control" placeholder="Order description"></textarea>
+        </div>
+        <div class="form-group">
+          <input type="submit" class="btn submit" value="Start request">
+        </div>
+      </div>
+      </form>
+    </div>
+
+  </div>
+</div>
+
+            </div> <!-- </div>  -->
+        </div>
+        <a href="#" class="scrollup hidden-xs"><span class="glyphicon glyphicon-arrow-up"></span></a>
+    </div> <!-- end of main-wrapper  -->
+    <footer class="clearfix">
+        <div class="main-footer">
+            <div class="row">
+                <div class="col-md-6">
+                    <nav class="navbar footer-nav" role="navigation">
+                        <ul class="nav navbar-nav">
+                            <li><a href="contacts.php">Contact us</a></li>
+                            <!--<li><a href="#">Help</a></li>-->
+                        </ul>
+                    </nav>
+                </div>
+                <div class="col-md-6">
+                    <p class="credentials">© Latvijas Pasta Banka 2015</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+</div> <!-- full-height wrapper -->
+<script type="text/javascript" src="js/jquery-1.11.1.min.js"></script>
+<script type="text/javascript" src="js/jquery-ui.min.js"></script>
+<script type="text/javascript" src="js/bootstrap.js"></script>
+<script type="text/javascript" src="js/chosen.jquery.min.js"></script>
+<script type="text/javascript" src="js/highcharts.js"></script>
+<script type="text/javascript" src="js/custom.js"></script>
+</body>
+</html>

@@ -1,0 +1,873 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>e-commerce</title>
+
+    <link rel="stylesheet" href="css/jquery-ui.min.css">
+    <!--    <link rel="stylesheet" href="css/jquery-ui.structure.min.css">-->
+    <link rel="stylesheet" href="css/chosen.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/magic.css">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script type="text/javascript"  src="js/html5shiv.js"></script>
+    <script type="text/javascript"  src="js/respond.min.js"></script>
+    <![endif]-->
+
+    <link href='http://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Merriweather' rel='stylesheet' type='text/css'>
+</head>
+<body>
+<div class="full-height">
+    <div class="main-wrapper container-fluid"> <!-- container adds width 1250px -->
+
+        <header class="navbar-fixed-top">
+            <nav class="navbar" role="navigation">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-md-3">
+                            <h1 class="main-logo pull-left"><a href="payments.html"><span class="name"></span> <span class="ecom">e</span>-commerce</a></h1>
+
+                            <div class="navbar-header">
+                                <button type="button" class="navbar-toggle main-nav-toggle" data-toggle="collapse" data-target=".main-nav">
+                                    <span class="sr-only">Toggle navigation</span>
+                                    <span class="icon-bar"></span>
+                                    <span class="icon-bar"></span>
+                                    <span class="icon-bar"></span>
+                                </button>
+                            </div>
+
+                        </div>
+                        <div class="col-md-9">
+                            <div class="collapse navbar-collapse main-nav">
+                                <ul class="nav navbar-nav">
+                                    <li><a class="is-selected" href="index.html">Dashboard</a></li>
+                                    <li class="dropdown">
+                                        <a class="is-selected"  href="payments.html">Payments</a>
+                                    </li>
+                                    <li><a class="" href="batches.html">Batches</a></li>
+                                    <!--<li><a href="merchants.html">Merchants</a></li>-->
+                                    <li><a href="moto.html">MOTO</a></li>
+                                    <li><a href="docs.html">Docs & samples</a></li>
+                                    <li class="dropdown user-nav">
+                                        <a class="dropdown-toggle" data-toggle="dropdown" href="profile.html">
+                                            <span class="glyphicon glyphicon-user"></span>
+                                            Vasilij Pupkin <span class="caret"></span>
+                                        </a>
+                                        <ul class="dropdown-menu" role="menu">
+                                            <li><a href="profile.html">Profile</a></li>
+                                            <li><a href="login.html">Logout</a></li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </div><!-- /.navbar-collapse -->
+                        </div>
+                    </div>
+                </div>
+                <div class="breadcrumb-wrapper">
+                    <ol class="breadcrumb text-right">
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">Library</a></li>
+                        <li class="active">Data</li>
+                    </ol>
+                </div>
+            </nav>
+        </header>
+        <div class="animated yt-loader"></div>
+
+        <div class="content-wrapper clearfix">
+            <div class="row">
+                <div class="col-sm-3 col-xs-12">
+                    <aside class="sidebar">
+                        <div>
+                            <div class="search-wrapper clearfix" data-toggle="tooltip" data-placement="right" title='#'>
+                                <form action="search-results.html" role="form">
+                                    <div class="input-group">
+                                        <input type="text" class="form-control search-field" name="search-field" placeholder="Search">
+                                        <span class="input-group-btn">
+                                          <button class="btn search-btn" type="submit"><span class="glyphicon glyphicon-search"></span></button>
+                                        </span>
+                                    </div>
+
+                                    <div class="im-lucky im-lucky-payment dropdown">
+                                        <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
+                                            <li role="presentation"><span class="glyphicon glyphicon-ok"></span><a role="menuitem" tabindex="-1" href="single-payment.html">Payment ID: 123456</a></li>
+                                        </ul>
+                                    </div>
+                                    <div class="im-lucky im-lucky-order dropdown">
+                                        <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
+                                            <p role="presentation">Are you looking for: </p>
+                                            <li role="presentation"><span class="glyphicon glyphicon-ok"></span><a role="menuitem" tabindex="-1" href="single-payment.html">Order ID: 4568123</a></li>
+                                            <li role="presentation" class="divider"></li>
+                                            <p role="presentation">or click search button.</p>
+                                        </ul>
+                                    </div>
+                                    <div class="im-lucky im-lucky-arn dropdown">
+                                        <div class="dropdown-menu small" role="menu" aria-labelledby="dropdownMenu1">
+                                            <p role="presentation">Are you looking for: </p>
+                                            <p role="presentation"><a role="menuitem" tabindex="-1" href="single-payment.html">ARN NR: 987654</a></p>
+                                            <p role="presentation" class="divider"></p>
+                                            <p role="presentation"><p role="menuitem" tabindex="-1" href="#">or click search.</p></p>
+                                        </div>
+                                    </div>
+                                    <div class="im-lucky search-desc dropdown">
+                                        <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
+                                            <li role="presentation"><span class="glyphicon glyphicon-ok"></span><a role="menuitem" tabindex="-1" href="search-results.html">Description</a></li>
+                                            <li role="presentation"><span class="glyphicon glyphicon-ok"></span><a role="menuitem" tabindex="-1" href="search-results.html">Card Name</a></li>
+                                            <li role="presentation"><span class="glyphicon glyphicon-ok"></span><a role="menuitem" tabindex="-1" href="search-results.html">Merchant</a></li>
+                                        </ul>
+                                    </div>
+
+                                    <div class="form-group-sm">
+                                        <select class="merchant-select form-control"  multiple="" data-placeholder="Merchant">
+                                            <option value="kleoss.eu">kleoss.eu</option>
+                                            <option value="tmw.ee">tmw.ee</option>
+                                            <option value="Bands, Orchestras, and Miscellaneous Entertainers Something Else">Bands, Orchestras, and Miscellaneous Entertainers Something Else</option>
+                                            <option value="Larson and Holz IT Ltd">Larson and Holz IT Ltd</option>
+                                            <option value="abmotoparts.com">abmotoparts.com</option>
+                                        </select>
+                                    </div>
+
+                                    <div class="form-group-sm">
+                                        <select class="state form-control"  multiple="" data-placeholder="State">
+                                            <option value="kleoss.eu">INITIATED</option>
+                                            <option value="tmw.ee">DECLINED</option>
+                                            <option value="APPROVED">APPROVED</option>
+                                            <option value="Larson and Holz IT Ltd">CANCELLED</option>
+                                            <option value="abmotoparts.com">DEPOSITED</option>
+                                        </select>
+                                    </div>
+
+
+                                    <div class="form-group-sm clearfix">
+                                        <div class="pull-left three-inputs short-inputs">
+                                            <select class="state form-control"  multiple="" data-placeholder="Curr">
+                                                <option value="kleoss.eu">EUR</option>
+                                                <option value="tmw.ee">RUB</option>
+                                                <option value="APPROVED">NZD</option>
+                                            </select>
+                                        </div>
+                                        <div class="pull-left three-inputs short-inputs">
+                                            <input type="text" class="form-control" placeholder="00.00">
+                                        </div>
+                                        <div class="pull-right three-inputs  short-inputs">
+                                            <input type="text" class="form-control" placeholder="00.00">
+                                        </div>
+
+                                    </div>
+
+                                    <div class="form-group-sm clearfix">
+                                        <div class="pull-left short-inputs">
+                                            <input type="text" class="form-control date-from" placeholder="25.06.2014">
+                                        </div>
+                                        <div class="pull-right short-inputs">
+                                            <input type="text" class="form-control date-to" placeholder="25.07.2014">
+                                        </div>
+                                    </div>
+                                    <div class="form-group-sm">
+                                        <input type="text" class="form-control" placeholder="Merchant">
+                                    </div>
+                                    <input type="submit" class="search-btn btn btn-block" value="Search">
+                                </form>
+                            </div>
+
+                            <div class="tasks"></div>
+
+                            <nav class="action-links">
+                                <ul class="list-group">
+                                    <li class="list-group-item hidden-lg"><span class="glyphicon glyphicon-stats"></span><a href="payments.html">See your dashboard</a></li>
+                                    <li class="list-group-item"><span class="glyphicon glyphicon-saved"></span><a href="payments.html">Deposit or cancel payments</a></li>
+                                    <li class="list-group-item"><span class="glyphicon glyphicon-minus"></span><a href="payments.html">Make a refund </a></li>
+                                    <li class="list-group-item"><span class="glyphicon glyphicon-floppy-save"></span><a href="batches.html">Create a financial report</a></li>
+                                    <li class="list-group-item"><span class="glyphicon glyphicon-random"></span><a href="batches.html">Create a chargeback report</a></li>
+                                    <li class="list-group-item"><span class="glyphicon glyphicon-flag"></span><a href="#">Respond to retrieval requests</a></li>
+                                    <li class="list-group-item"><span class="glyphicon glyphicon-plus"></span><a href="moto.html">Add a payment to subscription</a></li>
+                                    <li class="list-group-item"><span class="glyphicon glyphicon-phone-alt"></span><a href="moto.html">Add a payment via MO-TO</a></li>
+                                    <li class="list-group-item"><span class="glyphicon glyphicon-tower"></span><a href="merchants.html">Generate encryption keys</a></li>
+                                    <li class="list-group-item"><span class="glyphicon glyphicon-wrench"></span><a href="profile.html">Change your details</a></li>
+                                </ul>
+                            </nav>
+
+                        </div> <!-- affix -->
+                    </aside>
+                </div> <!-- col-sm-3 -->
+
+
+                <div class="col-sm-9 col-xs-12">
+  <div class="results-wrapper">
+    <div class="single-page-header">
+      <h2 class="page-title">Payments</h2>
+    </div>
+  <div class="panel">
+    <div class="panel-body small collapse in" id="demo">
+        <div class="row">
+          <div class="col-sm-3 col-xs-12">
+             <table class="table small">
+              <thead>
+                <th>Number of payments</th>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><span class="stats-number">5245</span></td>
+                </tr>
+              </tbody>
+              <thead>
+                <th class="no-border">Amount of money</th>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>
+                    <ul>
+                      <li><span class='stats-currency'>RUB</span><span class="stats-number">117356.91</span></li>
+                      <li><span class='stats-currency'>EUR</span><span class="stats-number">12345.56</span></li>
+                      <li><span class='stats-currency'>USB</span><span class="stats-number">785</span></li>
+                    </ul>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+           </div>
+
+          <div class="col-sm-9 col-xs-12">
+            <div id="mixed_container" style="min-width: 310px; height: 150px; margin: 0 auto"></div>
+          </div>
+        </div> 
+    </div>
+  </div>
+      <nav class="row search-number small">
+          <div class="col-sm-10">
+              <p>Showing results 40 of 340</p>
+              <p class="small text-muted">Try to clarify your search by specifying DATE, DEPARTMENT etc.</p>
+          </div>
+          <div class="col-sm-2">
+              <button type="button" class="export-btn btn btn-xs" data-toggle="button" aria-pressed="false" autocomplete="off">
+
+                  Export to Excel
+              </button>
+          </div>
+      </nav>
+
+      <!-- Modal -->
+      <div class="modal" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+          <div class="modal-dialog">
+              <div class="modal-content">
+                  <div class="modal-header"  data-dismiss="modal">
+                      <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span>
+                          <span class="sr-only">Close</span></button>
+                      <h4 class="modal-title" id="myModalLabel">Partial deposit</h4>
+                  </div>
+                  <div class="modal-body">
+                      <form class="form small clearfix" role="form" action="success.html">
+                          <label for="amount">Enter amount</label>
+                          <div class="input-group">
+                              <input name="amount" class="form-control" type="text" placeholder="00.00"  aria-describedby="basic-addon2">
+                              <span class="input-group-addon" id="basic-addon2">USD</span>
+                          </div>
+
+                      </form>
+                  </div>
+                  <div class="modal-footer">
+                      <button type="submit" class="btn pay">Pay</button>
+                  </div>
+              </div>
+          </div>
+      </div>
+  <div class="table-responsive clearfix">
+    <table class="payments-table table table-hover small">
+      <thead>
+        <th><div class="link-wrapper"><a href="#">Details</a></div><div class="caret-wrapper"><span class="caret"></span></div></th>
+        <th><div class="link-wrapper-long"><a href="#">Order ID / Merchant</a></div><div class="caret-wrapper"><span class="caret"></span></div></th>
+        <th><div class="link-wrapper"><a href="#">Card / Name / IP / Country</a></div><div class="caret-wrapper"><span class="caret"></span></div></th>
+        <th><div class="link-wrapper"><a href="#">Amount</a></div><div class="caret-wrapper"><span class="caret"></span></div></th>
+        <th><div class="link-wrapper"><a href="#">Type</a></div><div class="caret-wrapper selected dropup"><span class="caret"></span></div></th>
+        <th><div class="link-wrapper"><a href="#">Started</a></div><div class="caret-wrapper"><span class="caret"></span></div></th>
+        <th><div class="link-wrapper"><a href="#">State</a></div><div class="caret-wrapper"><span class="caret"></span></div></th>
+        <th><div class="link-wrapper">Action</div></th>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="details"><a href="single-payment.html">#3061744</a></td>
+          <td class="orderid-merchant">
+             <div class="multi-data">
+              <span>3705415</span>
+              <a href="merchants.html">EASYBYTEZ</a>
+            </div>
+          </td>
+          <td class="card-info">
+            <div class="multi-data">
+              <span class="visa card-icon"></span> 
+              <div class="card-details">
+                <span>589242XXXXXX6</span> 
+                <span class="small">Panagiotis Ghalastanis </span>
+                <span class="small"> 85.75.77.64 [GRC]</span>
+              </div>
+            </div>
+          </td>
+          <td class="payment-amount">14.49 EUR</td>
+          <td class="type-secure">
+             <div class="multi-data">
+            <span>Credit</span>
+            <span>3D</span>
+            </div>
+          </td>
+          <td class="date-started">17:55:25 01.07.2014</td>
+          <td class="payment-state initiated">
+            <span class="glyphicon glyphicon-time"></span>
+            <span>Initiated</span>
+          </td>
+          <td class="payment-action">&nbsp;</td>
+        </tr>
+        <tr>
+          <td class="details"><a href="single-payment.html">#3061744</a></td>
+          <td class="orderid-merchant">
+             <div class="multi-data">
+              <span>mon-53b40e09dab30</span>
+              <a href="#">TESTA MID LPB</a>
+              </div>
+          </td>
+          <td class="card-info">
+            <div class="multi-data">
+              <span class="mast card-icon"></span>
+              <div class="card-details">
+                <span>589242XXXXXX6</span> 
+                <span class="small">Panagiotis Ghalastanis</span>
+                <span class="small"> 85.75.77.64 [GRC]</span>
+              </div>
+            </div>
+          </td>
+          <td class="payment-amount">999999999.49 EUR</td>
+          <td class="type-secure">
+             <div class="multi-data">
+            <span>Reccuring</span>
+            <span>Non-3D</span>
+            </div>
+          </td>
+          <td class="date-started">17:55:25 01.07.2014</td>
+          <td class="payment-state declined" data-toggle="tooltip" data-container=".payment-state" data-placement="top" title="945: card enrollment verification in 3D secure service failed" id="example">
+            <span class="glyphicon glyphicon-ban-circle"></span>
+            <span>Declined</span>
+          </td>
+          <td class="payment-action">&nbsp;</td>
+        </tr>
+        <tr>
+          <td class=" details"><a href="single-payment.html">#3061744</a></td>
+          <td class="orderid-merchant">
+             <div class="multi-data">
+            <span>mon-53b405645ab30</span>
+            <a href="#">TESTA MID LPB</a>
+            </div>
+          </td>
+          <td class="card-info">
+            <div class="multi-data">
+              <span class="maest card-icon"></span>
+              <div class="card-details">
+                <span>589242XXXXXXXXXXXXX</span> 
+                <span class="small">Panagiotis Ghalastanis</span>
+                <span class="small"> 85.75.77.64 [GRC]</span>
+              </div>
+            </div>
+          </td>
+          <td class="payment-amount">95000.49 EUR</td>
+          <td class="type-secure">
+             <div class="multi-data">
+            <span>Payment</span>
+            <span>3D</span>
+            </div>
+          </td>
+          <td class="date-started">17:55:25 01.07.2014</td>
+          <td class="payment-state approved">
+            <span class="glyphicon glyphicon-ok"></span>
+            <span>Approved</span>
+          </td>
+          <td class="payment-action">
+            <div class="btn-group">
+              <button class="btn btn-xs dropdown-toggle" type="button" data-toggle="dropdown">Deposit <span class="caret"></span>
+              </button>
+              <ul class="dropdown-menu" role="menu">
+                <li><a href="#" data-toggle="modal" data-target="#myModal">Full Deposit</a></li>
+                <li><a href="#" data-toggle="modal" data-target="#myModal">Partial Deposit</a></li>
+              </ul>
+            </div>
+            <button class="btn btn-xs" type="button" data-toggle="modal" data-target="#myModal">Cancel</button>
+          </td>
+        </tr>
+        <tr>
+          <td class="details"><a href="single-payment.html">#3061744</a></td>
+          <td class="orderid-merchant">
+             <div class="multi-data">
+            <span>mon-53b40e09dab30</span>
+            <a href="#">TESTA MID LPB</a>
+            </div>
+          </td>
+          <td class="card-info">
+            <div class="multi-data">
+              <span class="maest card-icon"></span>
+              <div class="card-details">
+                <span>589242XXXXXX6</span> 
+                <span class="small">Panagiotis Ghalastanis</span>
+                <span class="small"> 85.75.77.64 [GRC]</span>
+              </div>
+            </div>
+          </td>
+          <td class="payment-amount">1400.49 EUR</td>
+          <td class="type-secure">
+             <div class="multi-data">
+            <span>Payment with token</span>
+            <span>NO-CVV2</span>
+            </div>
+          </td>
+          <td class="date-started">17:55:25 01.07.2014</td>
+          <td class="payment-state cancelled">
+            <span class="glyphicon glyphicon-remove"></span>
+            <span>Cancelled</span>
+          </td>
+          <td class="payment-action">&nbsp;</td>
+        </tr>
+        <tr>
+          <td class="details"><a href="single-payment.html">#3061744</a></td>
+          <td class="orderid-merchant">
+            <div class="multi-data">
+            <span>3705415</span>
+            <a href="merchants.html">EASYBYTEZ</a>
+            </div>
+          </td>
+          <td class="card-info">
+            <div class="multi-data">
+              <span class="visa card-icon"></span> 
+              <div class="card-details">
+                <span>589242XXXXXX6</span> 
+                <span class="small">Panagiotis Ghalastanis </span>
+                <span class="small"> 85.75.77.64 [GRC]</span>
+              </div>
+            </div>
+          </td>
+          <td class="payment-amount">14.49 EUR</td>
+          <td class="type-secure">
+             <div class="multi-data">
+            <span>Credit</span>
+            <span>3D</span>
+            </div>
+          </td>
+          <td class="date-started">17:55:25 01.07.2014</td>
+            <td class=" payment-state Deposited">
+              <span class="glyphicon glyphicon glyphicon-saved"></span><span>Deposited</span>
+            </td>
+          <td class="payment-action">&nbsp;</td>
+        </tr><tr>
+          <td class="details"><a href="single-payment.html">#3061744</a></td>
+          <td class="orderid-merchant">
+             <div class="multi-data">
+              <span>3705415</span>
+              <a href="merchants.html">EASYBYTEZ</a>
+            </div>
+          </td>
+          <td class="card-info">
+            <div class="multi-data">
+              <span class="visa card-icon"></span> 
+              <div class="card-details">
+                <span>589242XXXXXX6</span> 
+                <span class="small">Panagiotis Ghalastanis </span>
+                <span class="small"> 85.75.77.64 [GRC]</span>
+              </div>
+            </div>
+          </td>
+          <td class="payment-amount">14.49 EUR</td>
+          <td class="type-secure">
+             <div class="multi-data">
+            <span>Credit</span>
+            <span>3D</span>
+            </div>
+          </td>
+          <td class="date-started">17:55:25 01.07.2014</td>
+          <td class="payment-state initiated">
+            <span class="glyphicon glyphicon-time"></span>
+            <span>Initiated</span>
+          </td>
+          <td class="payment-action">&nbsp;</td>
+        </tr>
+        <tr>
+          <td class="details"><a href="single-payment.html">#3061744</a></td>
+          <td class="orderid-merchant">
+             <div class="multi-data">
+              <span>mon-53b40e09dab30</span>
+              <a href="#">TESTA MID LPB</a>
+              </div>
+          </td>
+          <td class="card-info">
+            <div class="multi-data">
+              <span class="mast card-icon"></span>
+              <div class="card-details">
+                <span>589242XXXXXX6</span> 
+                <span class="small">Panagiotis Ghalastanis</span>
+                <span class="small"> 85.75.77.64 [GRC]</span>
+              </div>
+            </div>
+          </td>
+          <td class="payment-amount">999999999.49 EUR</td>
+          <td class="type-secure">
+             <div class="multi-data">
+            <span>Reccuring</span>
+            <span>Non-3D</span>
+            </div>
+          </td>
+          <td class="date-started">17:55:25 01.07.2014</td>
+          <td class="payment-state declined" data-toggle="tooltip" data-container=".payment-state" data-placement="top" title="945: card enrollment verification in 3D secure service failed" id="example">
+            <span class="glyphicon glyphicon-ban-circle"></span>
+            <span>Declined</span>
+          </td>
+          <td class="payment-action">&nbsp;</td>
+        </tr>
+        <tr>
+          <td class=" details"><a href="single-payment.html">#3061744</a></td>
+          <td class="orderid-merchant">
+             <div class="multi-data">
+            <span>mon-53b405645ab30</span>
+            <a href="#">TESTA MID LPB</a>
+            </div>
+          </td>
+          <td class="card-info">
+            <div class="multi-data">
+              <span class="maest card-icon"></span>
+              <div class="card-details">
+                <span>589242XXXXXXXXXXXXX</span> 
+                <span class="small">Panagiotis Ghalastanis</span>
+                <span class="small"> 85.75.77.64 [GRC]</span>
+              </div>
+            </div>
+          </td>
+          <td class="payment-amount">95000.49 EUR</td>
+          <td class="type-secure">
+             <div class="multi-data">
+            <span>Payment</span>
+            <span>3D</span>
+            </div>
+          </td>
+          <td class="date-started">17:55:25 01.07.2014</td>
+          <td class="payment-state approved">
+            <span class="glyphicon glyphicon-ok"></span>
+            <span>Approved</span>
+          </td>
+          <td class="payment-action">
+            <div class="btn-group">
+              <button class="btn btn-xs dropdown-toggle" type="button" data-toggle="dropdown">Deposit <span class="caret"></span>
+              </button>
+              <ul class="dropdown-menu" role="menu">
+                <li><a href="#" data-toggle="modal" data-target="#myModal">Full Deposit</a></li>
+                <li><a href="#" data-toggle="modal" data-target="#myModal">Partial Deposit</a></li>
+              </ul>
+            </div>
+            <button class="btn btn-xs" type="button" data-toggle="modal" data-target="#myModal">Cancel</button>
+          </td>
+        </tr>
+        <tr>
+          <td class="details"><a href="single-payment.html">#3061744</a></td>
+          <td class="orderid-merchant">
+             <div class="multi-data">
+            <span>mon-53b40e09dab30</span>
+            <a href="#">TESTA MID LPB</a>
+            </div>
+          </td>
+          <td class="card-info">
+            <div class="multi-data">
+              <span class="maest card-icon"></span>
+              <div class="card-details">
+                <span>589242XXXXXX6</span> 
+                <span class="small">Panagiotis Ghalastanis</span>
+                <span class="small"> 85.75.77.64 [GRC]</span>
+              </div>
+            </div>
+          </td>
+          <td class="payment-amount">1400.49 EUR</td>
+          <td class="type-secure">
+             <div class="multi-data">
+            <span>Payment with token</span>
+            <span>NO-CVV2</span>
+            </div>
+          </td>
+          <td class="date-started">17:55:25 01.07.2014</td>
+          <td class="payment-state cancelled">
+            <span class="glyphicon glyphicon-remove"></span>
+            <span>Cancelled</span>
+          </td>
+          <td class="payment-action">&nbsp;</td>
+        </tr>
+        <tr>
+          <td class="details"><a href="single-payment.html">#3061744</a></td>
+          <td class="orderid-merchant">
+            <div class="multi-data">
+            <span>3705415</span>
+            <a href="merchants.html">EASYBYTEZ</a>
+            </div>
+          </td>
+          <td class="card-info">
+            <div class="multi-data">
+              <span class="visa card-icon"></span> 
+              <div class="card-details">
+                <span>589242XXXXXX6</span> 
+                <span class="small">Panagiotis Ghalastanis </span>
+                <span class="small"> 85.75.77.64 [GRC]</span>
+              </div>
+            </div>
+          </td>
+          <td class="payment-amount">14.49 EUR</td>
+          <td class="type-secure">
+             <div class="multi-data">
+            <span>Credit</span>
+            <span>3D</span>
+            </div>
+          </td>
+          <td class="date-started">17:55:25 01.07.2014</td>
+            <td class=" payment-state Deposited">
+              <span class="glyphicon glyphicon glyphicon-saved"></span><span>Deposited</span>
+            </td>
+          <td class="payment-action">&nbsp;</td>
+        </tr>        <tr>
+          <td class=" details"><a href="single-payment.html">#3061744</a></td>
+          <td class="orderid-merchant">
+             <div class="multi-data">
+            <span>mon-53b405645ab30</span>
+            <a href="#">TESTA MID LPB</a>
+            </div>
+          </td>
+          <td class="card-info">
+            <div class="multi-data">
+              <span class="maest card-icon"></span>
+              <div class="card-details">
+                <span>589242XXXXXXXXXXXXX</span> 
+                <span class="small">Panagiotis Ghalastanis</span>
+                <span class="small"> 85.75.77.64 [GRC]</span>
+              </div>
+            </div>
+          </td>
+          <td class="payment-amount">95000.49 EUR</td>
+          <td class="type-secure">
+             <div class="multi-data">
+            <span>Payment</span>
+            <span>3D</span>
+            </div>
+          </td>
+          <td class="date-started">17:55:25 01.07.2014</td>
+          <td class="payment-state approved">
+            <span class="glyphicon glyphicon-ok"></span>
+            <span>Approved</span>
+          </td>
+          <td class="payment-action">
+            <div class="btn-group">
+              <button class="btn btn-xs dropdown-toggle" type="button" data-toggle="dropdown">Deposit <span class="caret"></span>
+              </button>
+              <ul class="dropdown-menu" role="menu">
+                <li><a href="#" data-toggle="modal" data-target="#myModal">Full Deposit</a></li>
+                <li><a href="#" data-toggle="modal" data-target="#myModal">Partial Deposit</a></li>
+              </ul>
+            </div>
+            <button class="btn btn-xs" type="button" data-toggle="modal" data-target="#myModal">Cancel</button>
+          </td>
+        </tr>
+        <tr>
+          <td class="details"><a href="single-payment.html">#3061744</a></td>
+          <td class="orderid-merchant">
+             <div class="multi-data">
+            <span>mon-53b40e09dab30</span>
+            <a href="#">TESTA MID LPB</a>
+            </div>
+          </td>
+          <td class="card-info">
+            <div class="multi-data">
+              <span class="maest card-icon"></span>
+              <div class="card-details">
+                <span>589242XXXXXX6</span> 
+                <span class="small">Panagiotis Ghalastanis</span>
+                <span class="small"> 85.75.77.64 [GRC]</span>
+              </div>
+            </div>
+          </td>
+          <td class="payment-amount">1400.49 EUR</td>
+          <td class="type-secure">
+             <div class="multi-data">
+            <span>Payment with token</span>
+            <span>NO-CVV2</span>
+            </div>
+          </td>
+          <td class="date-started">17:55:25 01.07.2014</td>
+          <td class="payment-state cancelled">
+            <span class="glyphicon glyphicon-remove"></span>
+            <span>Cancelled</span>
+          </td>
+          <td class="payment-action">&nbsp;</td>
+        </tr>
+        <tr>
+          <td class="details"><a href="single-payment.html">#3061744</a></td>
+          <td class="orderid-merchant">
+            <div class="multi-data">
+            <span>3705415</span>
+            <a href="merchants.html">EASYBYTEZ</a>
+            </div>
+          </td>
+          <td class="card-info">
+            <div class="multi-data">
+              <span class="visa card-icon"></span> 
+              <div class="card-details">
+                <span>589242XXXXXX6</span> 
+                <span class="small">Panagiotis Ghalastanis </span>
+                <span class="small"> 85.75.77.64 [GRC]</span>
+              </div>
+            </div>
+          </td>
+          <td class="payment-amount">14.49 EUR</td>
+          <td class="type-secure">
+             <div class="multi-data">
+            <span>Credit</span>
+            <span>3D</span>
+            </div>
+          </td>
+          <td class="date-started">17:55:25 01.07.2014</td>
+            <td class=" payment-state Deposited">
+              <span class="glyphicon glyphicon glyphicon-saved"></span><span>Deposited</span>
+            </td>
+          <td class="payment-action">&nbsp;</td>
+        </tr>        <tr>
+          <td class=" details"><a href="single-payment.html">#3061744</a></td>
+          <td class="orderid-merchant">
+             <div class="multi-data">
+            <span>mon-53b405645ab30</span>
+            <a href="#">TESTA MID LPB</a>
+            </div>
+          </td>
+          <td class="card-info">
+            <div class="multi-data">
+              <span class="maest card-icon"></span>
+              <div class="card-details">
+                <span>589242XXXXXXXXXXXXX</span> 
+                <span class="small">Panagiotis Ghalastanis</span>
+                <span class="small"> 85.75.77.64 [GRC]</span>
+              </div>
+            </div>
+          </td>
+          <td class="payment-amount">95000.49 EUR</td>
+          <td class="type-secure">
+             <div class="multi-data">
+            <span>Payment</span>
+            <span>3D</span>
+            </div>
+          </td>
+          <td class="date-started">17:55:25 01.07.2014</td>
+          <td class="payment-state approved">
+            <span class="glyphicon glyphicon-ok"></span>
+            <span>Approved</span>
+          </td>
+          <td class="payment-action">
+            <div class="btn-group">
+              <button class="btn btn-xs dropdown-toggle" type="button" data-toggle="dropdown">Deposit <span class="caret"></span>
+              </button>
+              <ul class="dropdown-menu" role="menu">
+                <li><a href="#" data-toggle="modal" data-target="#myModal">Full Deposit</a></li>
+                <li><a href="#" data-toggle="modal" data-target="#myModal">Partial Deposit</a></li>
+              </ul>
+            </div>
+            <button class="btn btn-xs" type="button" data-toggle="modal" data-target="#myModal">Cancel</button>
+          </td>
+        </tr>
+        <tr>
+          <td class="details"><a href="single-payment.html">#3061744</a></td>
+          <td class="orderid-merchant">
+             <div class="multi-data">
+            <span>mon-53b40e09dab30</span>
+            <a href="#">TESTA MID LPB</a>
+            </div>
+          </td>
+          <td class="card-info">
+            <div class="multi-data">
+              <span class="maest card-icon"></span>
+              <div class="card-details">
+                <span>589242XXXXXX6</span> 
+                <span class="small">Panagiotis Ghalastanis</span>
+                <span class="small"> 85.75.77.64 [GRC]</span>
+              </div>
+            </div>
+          </td>
+          <td class="payment-amount">1400.49 EUR</td>
+          <td class="type-secure">
+             <div class="multi-data">
+            <span>Payment with token</span>
+            <span>NO-CVV2</span>
+            </div>
+          </td>
+          <td class="date-started">17:55:25 01.07.2014</td>
+          <td class="payment-state cancelled">
+            <span class="glyphicon glyphicon-remove"></span>
+            <span>Cancelled</span>
+          </td>
+          <td class="payment-action">&nbsp;</td>
+        </tr>
+        <tr>
+          <td class="details"><a href="single-payment.html">#3061744</a></td>
+          <td class="orderid-merchant">
+            <div class="multi-data">
+            <span>3705415</span>
+            <a href="merchants.html">EASYBYTEZ</a>
+            </div>
+          </td>
+          <td class="card-info">
+            <div class="multi-data">
+              <span class="visa card-icon"></span> 
+              <div class="card-details">
+                <span>589242XXXXXX6</span> 
+                <span class="small">Panagiotis Ghalastanis </span>
+                <span class="small"> 85.75.77.64 [GRC]</span>
+              </div>
+            </div>
+          </td>
+          <td class="payment-amount">14.49 EUR</td>
+          <td class="type-secure">
+             <div class="multi-data">
+            <span>Credit</span>
+            <span>3D</span>
+            </div>
+          </td>
+          <td class="date-started">17:55:25 01.07.2014</td>
+            <td class=" payment-state Deposited">
+              <span class="glyphicon glyphicon glyphicon-saved"></span><span>Deposited</span>
+            </td>
+          <td class="payment-action">&nbsp;</td>
+        </tr>
+      </tbody>
+    </table>
+    <?php  include('pagination.html'); ?>    
+  </div>
+  </div>
+</div>
+
+            </div> <!-- </div>  -->
+        </div>
+        <a href="#" class="scrollup hidden-xs"><span class="glyphicon glyphicon-arrow-up"></span></a>
+    </div> <!-- end of main-wrapper  -->
+    <footer class="clearfix">
+        <div class="main-footer">
+            <div class="row">
+                <div class="col-md-6">
+                    <nav class="navbar footer-nav" role="navigation">
+                        <ul class="nav navbar-nav">
+                            <li><a href="contacts.html">Contact us</a></li>
+                            <!--<li><a href="#">Help</a></li>-->
+                        </ul>
+                    </nav>
+                </div>
+                <div class="col-md-6">
+                    <p class="credentials">© Latvijas Pasta Banka 2015</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+</div> <!-- full-height wrapper -->
+<script type="text/javascript" src="js/jquery-1.11.1.min.js"></script>
+<script type="text/javascript" src="js/jquery-ui.min.js"></script>
+<script type="text/javascript" src="js/bootstrap.js"></script>
+<script type="text/javascript" src="js/chosen.jquery.min.js"></script>
+<script type="text/javascript" src="js/highcharts.js"></script>
+<script type="text/javascript" src="js/custom.js"></script>
+</body>
+</html>
